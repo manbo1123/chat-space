@@ -26,7 +26,6 @@ Things you may want to cover:
 # users table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
 |name|string|null: false, index: true|
 |email|string|null: false|
 |password|string|null: false|
