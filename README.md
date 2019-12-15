@@ -45,3 +45,7 @@ Things you may want to cover:
 |created_at|timestamps||
 |user_id|references|null: false, foreign_key|
 |group_id|rferences|null: false, foreign_key|
+
+## Association
+- belongs_to :user
+- belongs_to :group
