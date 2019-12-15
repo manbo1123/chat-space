@@ -49,3 +49,9 @@ Things you may want to cover:
 ## Association
 - belongs_to :user
 - belongs_to :group
+
+# groups table
+|Column|Type|Option|
+|------|----|------|
+|id|integer|null: false|
+|group_name|string|null: false|
