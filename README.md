@@ -60,3 +60,10 @@ Things you may want to cover:
 - has_many :users_groups
 - has_many :users, through: :users_groups
 - has_many :messages
+
+# users_groups table
+|Column|Type|Option|
+|------|----|------|
+|id|integer|null: false|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
