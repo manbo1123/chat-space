@@ -55,3 +55,8 @@ Things you may want to cover:
 |------|----|------|
 |id|integer|null: false|
 |group_name|string|null: false|
+
+## Association
+- has_many :users_groups
+- has_many :users, through: :users_groups
+- has_many :messages
