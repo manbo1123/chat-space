@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-center;
+}
+
+.side-bar{
+  height: 100%;
+  width: 300px;
+  background-color: #253141;
+  color: $whiteColor;
+  &__user-name{
+    font-weight: bold;
+    height: 100px;
+    font-size: 16px;
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon{
+    color: $whiteColor;
+    margin-left: 5px;
+    font-size: 90%;
+  }
+  &__group-list{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;  
+    padding: 0 20px;
+    &__name{
+      font-size: 15px;
+      padding: 20px 0 5px;
+    }
+    &__message{
+      font-size: 11px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.main-chat{
+  width: calc(100vw - 300px);
+  color: black;
+  &__group-info{
+    height: 100px;
+    background-color: $whiteColor;
+    border-bottom: #eeeeee solid 1px;
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      padding-left: 40px;
+      &__name{
+        margin: 35px 0 15px;
+        font-size: 20px;
+        color: $mainFontColor;
+      }
+      &__member{
+        color: $mainSubFontColor;
+        font-size: 12px;
+      }
+    }
+    &__edit-btn{
+      height: 40px;
+      margin: 28px 40px 0 0;
+      padding: 0 20px;
+      border: $blueColor solid 1px;
+      line-height: 40px;
+    }
+    &__btn{
+      color: $blueColor;
+      text-decoration:none;
+    }
+  }
+
+  &__message-list{
+    height: calc(100vh - 190px);
+    background-color: #fafafa;  
+    padding-left: 40px;
+    &__box{
+      padding: 35px 0 12px;
+      display: flex;
+      &__user{
+        color: $mainFontColor;
+        font-size: 16px;
+        font-weight: bolder;
+      }
+      &__date{
+        color: $mainSubFontColor;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    &__message{
+      color: #434a54;
+      font-size: 14px;
+      padding-bottom: 11px;
+    }
+  }
+
+  &__message-form{
+    height: 90px;
+    background-color: #d2d2d2;
+    line-height: 50px;
+    display: flex;
+    &__block{
+      display: flex;
+      margin: 20px 0 0 40px;
+      height: 50px;
+      width: 100%;
+      background-color: $whiteColor;
+      padding: 0 10px;
+      &__text{
+        width: 100%;
+      }
+    }
+    &__text-form{
+      height: 50px;
+      border: solid 0px;
+    }
+    &__image-icon{
+      font-size: 130%;
+    }
+    &__default{
+      display: none;
+    }
+    &__btn{
+      margin: 20px 40px 0 15px;
+      height: 50px;
+      width: 100px;
+      background-color: $blueColor;
+      color: $whiteColor;
+    }
+  }
+}
