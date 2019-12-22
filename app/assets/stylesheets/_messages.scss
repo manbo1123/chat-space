@@ -32,11 +32,13 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;  
     padding: 0 20px;
-    &__name{
+    &__name {
+      color: $whiteColor;
       font-size: 15px;
       padding: 20px 0 5px;
     }
     &__message{
+      color: $whiteColor;
       font-size: 11px;
       padding-bottom: 20px;
     }
