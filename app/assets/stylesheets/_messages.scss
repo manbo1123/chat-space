@@ -46,6 +46,7 @@
 }
 
 .main-chat{
+  height: 100vh;
   width: calc(100vw - 300px);
   color: black;
   &__group-info{
@@ -108,20 +109,22 @@
     height: 90px;
     background-color: #d2d2d2;
     line-height: 50px;
-    display: flex;
-    &__block{
+    width: 100%;
+    &__box{
       display: flex;
-      margin: 20px 0 0 40px;
-      height: 50px;
       width: 100%;
-      background-color: $whiteColor;
-      padding: 0 10px;
-      &__text{
+      &__block{
+        display: flex;
+        margin: 20px 0 0 40px;
+        height: 50px;
         width: 100%;
+        background-color: $whiteColor;
+        padding: 0 10px;
       }
     }
     &__text-form{
       height: 50px;
+      width: 100%;
       border: solid 0px;
     }
     &__image-icon{
@@ -131,7 +134,9 @@
       display: none;
     }
     &__btn{
-      margin: 20px 40px 0 15px;
+      margin-right: 40px;
+      margin-left: 15px;
+      margin-top: 20px;
       height: 50px;
       width: 100px;
       background-color: $blueColor;
