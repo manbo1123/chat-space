@@ -96,7 +96,7 @@ $(function(){
 
     $(function() {
       if (document.location.href.match(/\/groups\/\d+\/messages/)){
-        setInterval(update, 6000);
+        setInterval(update, 7000);
       }
     });
   });
