@@ -66,4 +66,38 @@ $(function(){
       $('.main-chat__message-form__btn').prop('disabled', false);
     })
   })
+  
+ //メッセージ自動更新
+  $(function() {
+    function update() {
+      let last_message_id = $('.message:last').data("message-id");
+      $.ajax({
+        type: 'GET',
+        url: 'api/messages',
+        data: {id: last_message_id},
+        dataType: 'json'
+      })
+      .done(function(messages) {
+        if (messages.length !== 0) {
+          let containHTML = '';
+          $.each(messages, function(i, message){
+            containHTML += buildHTML(message)
+          });
+          $('.main-chat__message-list').append(containHTML);
+          $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
+          $('#new_message')[0].reset();
+          $(".main-chat__message-form__btn").prop("disabled", false);
+        }
+      })
+      .fail(function() {
+        alert('メッセージの自動更新に失敗しました');
+      });
+    }
+
+    $(function() {
+      if (document.location.href.match(/\/groups\/\d+\/messages/)){
+        setInterval(update, 6000);
+      }
+    });
+  });
 });
