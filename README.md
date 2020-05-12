@@ -1,28 +1,44 @@
 # README
+rails学習のアウトプットのため、チャットアプリを作成しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ブラウザでのアクセス
+http://18.178.38.244/
 
-Things you may want to cover:
+# 開発環境
+- haml
+- sass
+- jquery
+- ruby on rails
+- Nginx
+- Capistrano
+### サーバー
+- AWS
+### DB
+- mysql
+### データ管理
+- guthub
 
-* Ruby version
+# 機能
+- ユーザー登録機能
+- グループ内でのチャット機能
+- 複数人によるグループチャット機能
+- チャット相手の検索機能
+- チャットの履歴表示機能
+- 画像送信機能
+- チャットの自動更新
 
-* System dependencies
 
-* Configuration
+devise(gem)を用い、ユーザーアカウントの登録機能を実装しました。
+![Alt text](https://gyazo.com/90b0b2d3edbfd9ee67cd7919bd26027b/raw)
 
-* Database creation
+チャット相手を検索し、グループを作成します。
+![Alt text](https://gyazo.com/d1ee96f3dac9f75d9afd8c452f78da80/raw)
 
-* Database initialization
+JSでチャットの自動更新機能を実装しました。
+![Alt text](https://gyazo.com/6c192e85a63179cd9de68ca642e51901/raw)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+# DB設計
 # users table
 |Column|Type|Options|
 |------|----|-------|
